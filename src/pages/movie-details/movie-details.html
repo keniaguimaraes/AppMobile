@@ -1,0 +1,39 @@
+<!--
+  Generated template for the MovieDetailsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color='primary'>
+    <ion-title>Detalhes</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <!--Se a variável filmes retornar algum valor, então o card é apresentado-->
+  <ion-card *ngIf="movies">
+
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="assets/imgs/avatar.png">
+      </ion-avatar>
+      <h2 class="feed_name">{{movies.original_title}}</h2>
+      <p class="feed_date">{{movies.release_date}}</p>
+    </ion-item>
+
+    <img [src]="'https://image.tmdb.org/t/p/w300/'+ movies.backdrop_path">
+
+    <ion-card-content>
+      <p>{{movies.overview}}</p>
+    </ion-card-content>
+
+  </ion-card>
+
+</ion-content>
