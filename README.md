@@ -1,4 +1,4 @@
-## Aplicativo Final da Disciplina de Dispositivos Moveis. 
+## Aplicativo Final da Disciplina de Dispositivos Móveis. 
 
  - [Apresentação](#apresentacao)
  - [Ferramentas](#ferramentas)
@@ -11,23 +11,23 @@
 
 ## Ferramentas
 - Ionic 3
-- API Restfull
+- API Restful
 - FireBase
 
 ## Versao
 - Versão 1.0
 
 ## Colaboradores 
- * [Kênia Guimarães] (https://github.com/keniaguimaraes)
- * [Luis Oscar Resende] (https://github.com/oscaresende)
+  [Kênia Guimarães](https://github.com/keniaguimaraes)
+  [Luis Oscar Resende](https://github.com/oscaresende)
 
 ## Como Rodar Localmente
- - Clone o respositorio
- - Na diretorio do projeto execute:
+ - Clone este respositório
+ - No diretório do projeto execute:
 ```
-$ Run 'npm install'
-$ Run 'ionic serve' 
-
+$ run 'npm install'
+$ run 'npm install angularfire2 firebase promise-polyfill --save'
+$ run 'ionic serve' 
 ```
 
 
