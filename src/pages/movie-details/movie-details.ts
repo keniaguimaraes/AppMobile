@@ -34,15 +34,13 @@ export class MovieDetailsPage {
   ionViewDidEnter() {
     console.log('ionViewDidLoad MovieDetailsPage');
     this.id_movie = this.navParams.get("id");
-    console.log("id movie received: " + this.id_movie);
+   // console.log("id movie received: " + this.id_movie);
     this.getDetailMovie(this.id_movie);
   }
 
 
   public getDetailMovie(id_movie) {
     this.presentLoading();
-    console.log("method getDetaisMovie " + id_movie);
-
     this.http.get(this.base_url + `/movie/${id_movie}?api_key=` + this.api_key).subscribe(data => {
         let response = (data as any);
         this.movies = JSON.parse(JSON.stringify(response || null));

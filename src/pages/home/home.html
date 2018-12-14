@@ -13,7 +13,7 @@
     <ion-grid>
       <ion-row>
         <ion-col>
-          <h5>Bem vindo: {{ user.email }}</h5>
+          <h5>Bem Vindo: {{ user.email }}</h5>
         </ion-col>
         <ion-col>
         </ion-col>
@@ -30,7 +30,7 @@
         <ion-refresher-content></ion-refresher-content>
       </ion-refresher>
       <div>
-        <h1>Filmes mais populares</h1>
+        <h1>Filmes Mais Populares</h1>
       </div>
       <ion-card *ngFor="let movies of list_movie">
     
@@ -38,8 +38,8 @@
           <ion-avatar item-start>
             <img src="assets/imgs/avatar.png">
           </ion-avatar>
-          <h2 class="feed_name">{{movies.original_title}}</h2>
-          <p class="feed_date">{{movies.release_date}}</p>
+          <h2>{{movies.original_title}}</h2>  
+          <p>{{movies.release_date| date: "dd/MM/yyyy"}}</p>
         </ion-item>
     
         <img [src]="'https://image.tmdb.org/t/p/w300/'+ movies.backdrop_path">
@@ -52,19 +52,14 @@
           <ion-col>
             <button ion-button icon-left clear small>
               <ion-icon name="thumbs-up"></ion-icon>
-              <div>{{movies.vote_count}} Votes</div>
+              <div>{{movies.vote_count}} Votos</div>
             </button>
           </ion-col>
           <ion-col>
             <button ion-button icon-left clear small>
               <ion-icon name="text"></ion-icon>
-              <div>{{movies.popularity}} Popularity</div>
+              <div>{{movies.popularity}} Popularidade</div>
             </button>
-          </ion-col>
-          <ion-col center text-center>
-            <ion-note>
-              {{object_feed.time_feed}}
-            </ion-note>
           </ion-col>
         </ion-row>
         <button ion-button block (click)="openDetailsMovies(movies)">Detalhes</button>
